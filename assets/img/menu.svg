@@ -1,0 +1,12 @@
+<svg id="منو" xmlns="http://www.w3.org/2000/svg" width="14" height="11" viewBox="0 0 14 11">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #b3bfdb;
+      }
+    </style>
+  </defs>
+  <rect class="cls-1" width="11" height="1"/>
+  <rect id="Rectangle_2_copy" data-name="Rectangle 2 copy" class="cls-1" y="5" width="8" height="1"/>
+  <rect id="Rectangle_2_copy_2" data-name="Rectangle 2 copy 2" class="cls-1" y="10" width="14" height="1"/>
+</svg>

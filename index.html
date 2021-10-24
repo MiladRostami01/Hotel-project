@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="assets/css/icon.css">
+  <link rel="stylesheet" href="/assets/css/index.css">
+  <link rel="stylesheet" href="assets/css/jalalidatepicker.min.css">
+  <title>Hotel Project</title>
+</head>
+
+<body>
+  <header>
+    <!-- Navbar start -->
+    <nav>
+      <div class="col1">
+        <div class="logo">
+          <img src="/assets/img/main-logo.png" alt="">
+        </div>
+        <ul>
+          <li><a href="#">رزو هتل</a></li>
+          <li><a href="#">پیگیری رزو</a></li>
+          <li><a href="#">وبلاگ</a></li>
+          <li><a href="#">تماس با ما</a></li>
+        </ul>
+      </div>
+      <div class="col2">
+        <span class="icon-search"></span>
+        <span class="icon-align-left"></span>
+      </div>
+    </nav>
+    <!-- Navbar end -->
+    <!-- Header-content start -->
+    <section class="header-content">
+      <!-- Slider start -->
+      <div class="slider">
+        <span class="icon-ellipsis-vertical"></span>
+      </div>
+      <!-- Slider end -->
+      <!-- Hotel-search start -->
+      <div class="hotel-search">
+        <div class="search-city-title">
+          <span class="icon-location-pin"></span>
+          <span>شهر مورد نظر</span>
+        </div>
+        <div class="search-city">
+          <select>
+            <option value="">اصفهان</option>
+          </select>
+        </div>
+        <div class="search-hotel-title">
+          <span class="icon-bookmark"></span>
+          <span>هتل مورد نظر</span>
+        </div>
+        <div class="search-hotel">
+          <select>
+            <option value="">پیروزی</option>
+          </select>
+        </div>
+        <div class="search-date-title">
+          <span class="icon-calendar"></span>
+          <span>محدوده تاریخ</span>
+        </div>
+        <div class="search-from-date">
+          <input type="text" data-jdp placeholder="از تاریخ">
+        </div>
+        <div class="search-to-date">
+          <input type="text" data-jdp id="toDate" placeholder="تا تاریخ">
+        </div>
+        <div class="search-btns">
+          <button type="button" class="hotel-list-btn">لیست هتل ها</button>
+          <button type="button" class="hotel-search-btn">جستجو هتل</button>
+        </div>
+      </div>
+      <!-- Hotel-search end -->
+    </section>
+    <!-- Header-content end -->
+  </header>
+</body>
+<!-- solar calender -->
+<script src="assets/js/jalalidatepicker.min.js"></script>
+<script>
+  jalaliDatepicker.startWatch();
+</script>
+
+</html>
