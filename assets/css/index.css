@@ -365,13 +365,10 @@ main{
 
 /* hotel list */
 .hotel-list{
-  margin: 40px 0;
+  margin-top: 40px ;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 1rem 2rem;
-}
-.hotel-list div[class*="hotel"]{
-  /* background-color: #9ccc65; */
 }
 .hotel-item{
   background-repeat: no-repeat;
@@ -442,6 +439,78 @@ main{
 .dariush-hotel{
   grid-area: 2/4/3/5;
   background-image: url(../img/dariush-hotel-kish.png);
+}
+
+/* contact us */
+.contact-us{
+  margin-top: 90px;
+  padding: 30px 0px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 1rem 0;
+}
+.phone-number span, 
+.contact-us span {
+  color: #bdc5d8;
+  margin: 0px 0.5rem;
+}
+.phone-number{
+  justify-self: end;
+  grid-area: 1/1/2/2;
+  margin-left: 2rem;
+}
+.contact-address{
+  grid-area: 1/2/2/3;
+}
+
+/* footer */
+footer{
+  background-color: #13222c;
+}
+.footer-container{
+  width: 100%;
+  max-width: 1054px;
+  margin: 0 auto;
+}
+footer .logo-container {
+  text-align: center;
+  padding: 20px 20px 30px 20px;
+}
+footer .logo {
+  width: 100px;
+  height: auto;
+  display: inline-block;
+  margin: 0;
+}
+footer .logo img {
+  width: 100%;
+  height: 100%;
+}
+footer .text{
+  padding: 0px 10% 40px 10%;
+  color: #d2c8bd;
+}
+footer .text p {
+  text-align: center;
+  text-justify: inter-word;
+}
+footer .credit-symbols{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 20px;
+}
+footer .credit-symbols div {
+  margin: 0 1rem;
+}
+footer .social-media{
+  text-align: center;
+  padding-bottom: 20px;
+}
+footer .social-media span {
+  color: #4b5553;
+  margin: 0 1rem;
+  font-size: 40px;
 }
 
 
@@ -575,6 +644,11 @@ main{
   .dariush-hotel{
     grid-area: 3/3/4/5;
   }
+
+  /* contact-us */
+  .contact-us{
+    margin: 20px;
+  }
 }
 
 
@@ -682,7 +756,7 @@ main{
   .hotel-item-off{
     position: absolute;
     top: 40px;
-    left:50px;
+    left:32%;
   }
   .hotel-list-title{
     justify-self: start;
@@ -703,6 +777,15 @@ main{
   }
   .dariush-hotel{
     grid-area: 6/1/7/5;
+  }
+
+  /* contact-us */
+  .phone-number{
+    justify-self: start;
+    grid-area: 1/1/2/3;
+  }
+  .contact-address{
+    grid-area: 2/1/3/3;
   }
 }
 
