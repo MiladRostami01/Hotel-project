@@ -231,7 +231,7 @@ main{
 .services{
   width: 100%;
   display: grid;
-  grid-template-columns: repeat(4,1fr);
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   grid-gap: 1rem 2rem;
   margin-top: 40px;
   padding: 2rem;
@@ -259,13 +259,13 @@ main{
 /* city list */
 .city-list{
   margin-top: 40px;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-gap: 1rem 2rem;
 }
-.city-list-title{
-  justify-self: start;
-  grid-area: 1/1/2/3;
+.city-title-menu{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
 }
 .city-title-icon{
   margin-left: 0.5rem;
@@ -280,19 +280,29 @@ main{
   color: #bdc5d8;
 }
 .city-see-more{
-  justify-self: end;
-  grid-area: 1/3/2/5;
   cursor: pointer;
 }
 .city-see-more span{
   margin-left: 1rem;
   color: #8693b1;
 }
+.city-items{
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-gap: 1.5rem;
+  margin-top: 20px;
+}
 .city-item{
+  height: auto;
   position: relative;
   border-radius: 10px;
   cursor: pointer;
   overflow: hidden;
+}
+.city-item:hover{
+  opacity: 75%;
+  transform: scale(1.02);
+  transition: all 0.3s ease-out;
 }
 .city-item img{
   width: 100%;
@@ -301,8 +311,8 @@ main{
 }
 .city-off{
   position: absolute;
-  top: 40px;
-  left: 40px;
+  top: 30px;
+  left: 30px;
   transform: rotate(-0.1turn);
   padding: 7px 4px;
   border-radius: 50%;
@@ -311,22 +321,10 @@ main{
   outline: 10px solid rgba(241, 97, 97, 0.15) ;
   box-shadow: 0px 0px 0px 20px rgba(241, 97, 97, 0.05);
 }
-.city-tehran{
-  grid-area: 2/1/3/2;
-}
-.city-shiraz{
-  grid-area: 2/2/3/3;
-}
-.city-esfahan{
-  grid-area: 2/3/3/4;
-}
-.city-tabriz{
-  grid-area: 2/4/3/5;
-}
 
 
-/* service-2 */
-.service-2{
+/* seasonal-discount */
+.seasonal-discount{
   background-image: url(../img/service2-bg.png);
   background-repeat: no-repeat;
   background-size: cover;
@@ -366,9 +364,34 @@ main{
 /* hotel list */
 .hotel-list{
   margin-top: 40px ;
+}
+.hotel-list-menu{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.hotle-title-icon{
+  margin-left: 0.5rem;
+  color: #bdc5d8;
+}
+.hotle-title-text{
+  margin-left: 1rem;
+  color: #8693b1;
+}
+.hotle-title-off{
+  color: #bdc5d8;
+}
+.hotel-see-more span {
+  margin-left: 1rem;
+  color: #8693b1;
+  cursor: pointer;
+}
+.hotle-items{
+  margin-top: 20px;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-gap: 1rem 2rem;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-gap: 1rem;
 }
 .hotel-item{
   background-repeat: no-repeat;
@@ -380,10 +403,16 @@ main{
   cursor: pointer;
   position: relative;
 }
+.hotel-item:hover{
+  /* opacity: 75%; */
+  transform: scale(1.02);
+  transition: all 0.3s ease-out;
+}
 .hotel-item-off{
   position: absolute;
-  top: 40px;
-  left: 25%;
+  top: 30px;
+  left: 30px;
+  /* left: 25%; */
   transform: rotate(-0.1turn);
   padding: 7px 4px;
   border-radius: 50%;
@@ -399,45 +428,16 @@ main{
   width: 100%;
   color: #ffffff;
 }
-.hotel-list-title{
-  justify-self: start;
-  grid-area: 1/1/2/3;
-}
-.hotle-title-icon{
-  margin-left: 0.5rem;
-  color: #bdc5d8;
-}
-.hotle-title-text{
-  margin-left: 1rem;
-  color: #8693b1;
-}
-.hotle-title-off{
-  color: #bdc5d8;
-}
-.hotel-see-more{
-  justify-self: end;
-  grid-area: 1/3/2/5;
-}
-.hotel-see-more span {
-  margin-left: 1rem;
-  color: #8693b1;
-  cursor: pointer;
-}
 .Qaser-hotel{
-  grid-area: 2/1/3/2;
-  background-image: url(../img/Qaser-shirin-hotel.png);
-  
+  background-image: url(../img/Qaser-shirin-hotel.png); 
 }
 .chamran-hotel{
-  grid-area: 2/2/3/3;
   background-image: url(../img/chamran-hotel-shiraz.png);
 }
 .abasi-hotel{
-  grid-area: 2/3/3/4;
   background-image: url(../img/abasi-hotel-esfahan.png);
 }
 .dariush-hotel{
-  grid-area: 2/4/3/5;
   background-image: url(../img/dariush-hotel-kish.png);
 }
 
@@ -445,22 +445,18 @@ main{
 .contact-us{
   margin-top: 90px;
   padding: 30px 0px;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-gap: 1rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.contact-address{
+  padding-top: 10px;
 }
 .phone-number span, 
 .contact-us span {
   color: #bdc5d8;
   margin: 0px 0.5rem;
-}
-.phone-number{
-  justify-self: end;
-  grid-area: 1/1/2/2;
-  margin-left: 2rem;
-}
-.contact-address{
-  grid-area: 1/2/2/3;
 }
 
 /* footer */
@@ -567,46 +563,17 @@ footer .social-media span {
   }
 
   /* services */
-  .service-item{
-    margin-right: 3rem;
-  }
-  .off{
-    grid-area: 1/1/2/3;
-  }
-  .support{
-    grid-area: 1/3/2/5;
-  }
-  .interducing{
-    grid-area: 2/1/3/3;
-  }
-  .weblog{
-    grid-area: 2/3/3/5;
-  }
-
+  
   /* city list */
   .city-list{
     margin: 40px 20px 0px 20px;
   }
-  .city-list-title{
-    grid-area: 1/1/2/3;
-  }
-  .city-see-more{
-    grid-area: 1/3/2/5;
-  }
-  .city-tehran{
-    grid-area: 2/1/3/3;
-  }
-  .city-shiraz{
-    grid-area: 2/3/3/5;
-  }
-  .city-esfahan{
-    grid-area: 3/1/4/3;
-  }
-  .city-tabriz{
-    grid-area: 3/3/4/5;
-  }
+  /* .city-items{
+    grid-template-columns: 1fr 1fr 1fr;
+  } */
+  
 
-  /* service-2 */
+  /* seasonal-discount */
   .winter-off{
     grid-area: 1/1/2/3;
   }
@@ -623,26 +590,6 @@ footer .social-media span {
   /* hotel list */
   .hotel-list{
     margin: 40px 20px;
-  }
-  .hotel-list-title{
-    justify-self: start;
-    grid-area: 1/1/2/3;
-  }
-  .hotel-see-more{
-    justify-self: end;
-    grid-area: 1/3/2/5;
-  }
-  .Qaser-hotel{
-    grid-area: 2/1/3/3;
-  }
-  .chamran-hotel{
-    grid-area: 2/3/3/5;
-  }
-  .abasi-hotel{
-    grid-area: 3/1/4/3;
-  }
-  .dariush-hotel{
-    grid-area: 3/3/4/5;
   }
 
   /* contact-us */
@@ -701,48 +648,16 @@ footer .social-media span {
 }
 
 /* services */
-  .service-item{
-    margin-right: 0rem;
-  }
-  .off{
-    grid-area: 1/1/2/5;
-  }
-  .support{
-    grid-area: 2/1/3/5;
-  }
-  .interducing{
-    grid-area: 3/1/4/5;
-  }
-  .weblog{
-    grid-area: 4/1/5/5;
-  }
+  
 
  /* city list */
   .city-list{
-    margin: 0px 20px 0px 20px;
+    margin: 30px 20px;
   }
-  .city-list-title{
-    grid-area: 1/1/2/5;
-  }
-  .city-see-more{
-    justify-self: start;
-    grid-area: 2/1/3/5;
-  }
-  .city-tehran{
-    grid-area: 3/1/4/5;
-  }
-  .city-shiraz{
-    grid-area: 4/1/5/5;
-  }
-  .city-esfahan{
-    grid-area: 5/1/6/5;
-  }
-  .city-tabriz{
-    grid-area: 6/1/7/5;
-  }
+  
 
-  /* sevice-2 */
-  .service-2{
+  /* seasonal-discount */
+  .seasonal-discount{
     background-position: right;
   }
   .winter-off{
@@ -755,38 +670,11 @@ footer .social-media span {
   /* hotel list */
   .hotel-item-off{
     position: absolute;
-    top: 40px;
-    left:32%;
-  }
-  .hotel-list-title{
-    justify-self: start;
-    grid-area: 1/1/2/5;
-  }
-  .hotel-see-more{
-    justify-self: start;
-    grid-area: 2/1/3/5;
-  }
-  .Qaser-hotel{
-    grid-area: 3/1/4/5;
-  }
-  .chamran-hotel{
-    grid-area: 4/1/5/5;
-  }
-  .abasi-hotel{
-    grid-area: 5/1/6/5;
-  }
-  .dariush-hotel{
-    grid-area: 6/1/7/5;
+    top: 30px;
+    left:20%;
   }
 
   /* contact-us */
-  .phone-number{
-    justify-self: start;
-    grid-area: 1/1/2/3;
-  }
-  .contact-address{
-    grid-area: 2/1/3/3;
-  }
 }
 
 
